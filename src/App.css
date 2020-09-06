@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Varela Round", sans-serif;
+  transition: all 0.5s;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.nav {
+  background-color: rgba(25, 118, 210);
+  min-height: 100%;
+}
+
+.SideNavBar {
+  background-color: rgba(25, 118, 210);
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+}
+.SideNavBar h1 {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+.bar {
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.5em 0.4rem;
+  cursor: pointer;
+}
+.bar:hover {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bar:active {
+  color: rgb(13, 82, 13);
+}
+.icon:active {
+  color: rgb(13, 82, 13);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#hide {
+  display: none;
+}
+
+.SideNavBar ul li {
+  padding: 1rem auto;
+  display: flex;
+  align-items: flex-start;
+}
+.SideNavBar ul li a {
+  display: flex;
+  text-decoration: none;
+  padding: 1rem 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s;
+}
+.SideNavBar ul li a p {
+  padding-left: 0.3rem;
+  padding-top: 0.3rem;
+  text-shadow: 1px 0px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.SideNavBar ul li a:hover {
+  color: white;
+}
+
+.SideNavBar ul li p:active {
+  color: rgb(13, 82, 13);
+}
+.hidden {
+  display: none;
+}
+.fully {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(25, 118, 210);
+  z-index: 1;
+}
+.fully #para {
+  display: block;
+}
+/*------------------------CARD BODY----------------*/
+
+.CardBodyMain {
+  display: flex;
+}
+.CB_Container {
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.CD_total {
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  height: 6rem;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.CD_total h3 {
+  padding: 5px;
+}
+.CB_history h1 {
+  text-align: right;
+  margin-top: 15px;
+}
+.CB_history ul {
+  list-style: none;
+}
+/*------------------------CARD BODY----------------*/
+
+.homeTotals {
+  width: 20rem;
+  height: 8rem;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1040px) {
+  .SideNavBar ul li a p {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .SideNavBar h1 {
+    display: none;
+  }
+  #hide {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1040px) {
+  .fully #hide {
+    display: block;
+  }
+  .icon {
+    pointer-events: none;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .CardBodyMain {
+    display: flex;
+    flex-direction: column;
+  }
+  .CB_historyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: end;
+  }
+  .CB_history {
   }
 }
